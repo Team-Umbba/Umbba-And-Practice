@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -85,4 +86,11 @@ dependencies {
 
     //coil
     implementation 'io.coil-kt:coil:2.4.0'
+
+    // import the firebase bom
+    implementation platform('com.google.firebase:firebase-bom:32.1.1')
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    // Import Firebase Cloud Messaging SDK
+    implementation 'com.google.firebase:firebase-messaging'
 }
