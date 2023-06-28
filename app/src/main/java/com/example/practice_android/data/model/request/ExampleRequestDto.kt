@@ -1,4 +1,4 @@
-package com.example.umbba_android.data.model.request
+package com.example.practice_android.data.model.request
 
 import kotlinx.serialization.Serializable
 

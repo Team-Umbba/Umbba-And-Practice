@@ -1,4 +1,4 @@
-package com.example.umbba_android.util.binding
+package com.example.practice_android.util.binding
 
 import android.os.Bundle
 import androidx.annotation.LayoutRes

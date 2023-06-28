@@ -1,4 +1,4 @@
-package com.example.umbba_android.data.model.response.wrapper
+package com.example.practice_android.data.model.response.wrapper
 
 import kotlinx.serialization.Serializable
 

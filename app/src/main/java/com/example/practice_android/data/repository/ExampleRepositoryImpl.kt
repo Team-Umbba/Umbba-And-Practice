@@ -1,10 +1,10 @@
-package com.example.umbba_android.data.repository
+package com.example.practice_android.data.repository
 
-import com.example.umbba_android.data.datasource.ExampleDateSource
-import com.example.umbba_android.data.model.request.ExampleRequestDto
-import com.example.umbba_android.data.model.response.ExampleResponseDto
-import com.example.umbba_android.data.model.response.wrapper.BaseResponse
-import com.example.umbba_android.domain.repository.ExampleRepository
+import com.example.practice_android.data.datasource.ExampleDateSource
+import com.example.practice_android.data.model.request.ExampleRequestDto
+import com.example.practice_android.data.model.response.ExampleResponseDto
+import com.example.practice_android.data.model.response.wrapper.BaseResponse
+import com.example.practice_android.domain.repository.ExampleRepository
 
 class ExampleRepositoryImpl(
     private val exampleDateSource: ExampleDateSource
