@@ -3,6 +3,9 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
 android {
     namespace 'com.example.practice_android'
     compileSdk 33
@@ -15,6 +18,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "KAKAO_NATIVE_APP_KEY", properties["KAKAO_NATIVE_APP_KEY"]
+        manifestPlaceholders["NATIVE_APP_KEY"] = properties["KAKAO_NATIVE_APP_KEY_NO_QUOTES"]
     }
 
     buildTypes {
@@ -31,6 +37,7 @@ android {
         jvmTarget = '1.8'
     }
     buildFeatures {
+        buildConfig true
         viewBinding true
         dataBinding true
     }
@@ -85,4 +92,8 @@ dependencies {
 
     //coil
     implementation 'io.coil-kt:coil:2.4.0'
+
+    //kakaologin
+    implementation 'com.kakao.sdk:v2-user:2.11.0'
+    implementation 'com.kakao.sdk:v2-share:2.11.0'
 }
